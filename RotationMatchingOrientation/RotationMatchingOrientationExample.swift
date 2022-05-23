@@ -48,12 +48,13 @@ struct RotationMatchingOrientationExample: View {
     var body: some View {
         VStack {
             VStack {
-                Image(systemName: "face.smiling")
+                Image("FrameUp-logo")
                     .resizable()
                     .scaledToFit()
                     .frame(height: 40)
                 
                 Text("Control this view's orientation with the settings below")
+                    .font(.caption)
             }
             .foregroundColor(.white)
             .padding()
