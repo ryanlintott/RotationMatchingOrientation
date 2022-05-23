@@ -4,9 +4,13 @@ Rotates any view so that it matches the device orientation if it's in an array o
 
 *Submission for SwiftUISeries - Workarounds & Hacks event*
 
-# Use cases
-- Your app only works in portrait but an image view you want to view in landscape as well.
-- Your app allows portrait and landscape but you want to lock one view to lanscape.
+# Why did I make this workaround?
+When building [Old English Wordhord](https://oldenglishwordhord.com/app/) I wanted the app to be portrait-only but the image view to rotate with the phone. Although this can be done in UIKit, SwiftUI doesn't have a way to control allowed orientations per view.
+
+# Example
+The app only allows portrait and landscapeLeft orientations but the content can be set to rotate to any number of orientations using the toggles.
+
+[![Example Video](https://img.youtube.com/vi/Ae4hbOIU9jc/0.jpg)](https://www.youtube.com/watch?v=Ae4hbOIU9jc)
 
 # How does it work?
 - Device orientation is taken from `UIDevice.current.orientation`
