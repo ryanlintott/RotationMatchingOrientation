@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension InterfaceOrientation {
+internal extension InterfaceOrientation {
     init?(key: String) {
         switch key {
         case "UIInterfaceOrientationPortrait":
@@ -45,6 +45,21 @@ extension InterfaceOrientation {
             return .degrees(180)
         default:
             return .zero
+        }
+    }
+    
+    var name: String {
+        switch self {
+        case .portrait:
+            return "portrait"
+        case .landscapeLeft:
+            return "landscapeLeft"
+        case .landscapeRight:
+            return "landscapeRight"
+        case .portraitUpsideDown:
+            return "portraitUpsideDown"
+        default:
+            return "*new case*"
         }
     }
 }
